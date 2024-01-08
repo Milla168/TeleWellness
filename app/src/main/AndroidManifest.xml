@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.DoctorRegistration"
+        tools:targetApi="31">
+        <activity
+            android:name=".Doctor.Frontend.DoctorViewShift"
+            android:exported="false" />
+        <activity
+            android:name=".Doctor.Frontend.DoctorCreateShift"
+            android:exported="false" />
+        <activity
+            android:name=".Patient.Frontend.PatientCreateAppointmentSlots"
+            android:exported="false" />
+        <activity
+            android:name=".Doctor.Frontend.DoctorShiftCalendar"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.Backend.AdminPendingRequest"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.Backend.AdminDeniedRequest"
+            android:exported="true" />
+        <activity
+            android:name=".Doctor.Backend.DoctorAppointmentsList"
+            android:exported="false" />
+        <activity
+            android:name=".Patient.Frontend.PatientViewAppointments"
+            android:exported="false" />
+        <activity
+            android:name=".Launcher.MainWelcome"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Doctor.Backend.DoctorRegistration" />
+        <activity android:name=".Patient.Backend.PatientRegistration" />
+        <activity android:name=".Doctor.Frontend.DoctorWelcome" />
+        <activity android:name=".Admin.Frontend.AdminWelcome" />
+        <activity android:name=".Patient.Frontend.PatientWelcome" />
+        <activity android:name=".Launcher.RegisterDorP" />
+        <activity android:name=".Launcher.Login" /> <!-- WeekViewActivity added -->
+        <activity
+            android:name=".Calendar.WeekViewActivity"
+            android:exported="false" />
+    </application>
+
+</manifest>
